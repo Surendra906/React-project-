@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 0 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #262626;
+    color: #fff;
+}
+
+.controls {
+    width: calc(100% - 64px);
+    max-width: 986px;
+    margin: 0 auto 20px;
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) auto auto;
+    gap: 12px;
+}
+
+input,
+button {
+    height: 48px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+input {
+    min-width: 0;
+    padding: 0 16px;
+    border: 1px solid #3d3d3d;
+    background: #191919;
+    color: #fff;
+}
+
+input::placeholder {
+    color: #8e8e8e;
+}
+
+button {
+    padding: 0 20px;
+    border: 1px solid #777;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #323232;
+}
+
+table {
+    width: calc(100% - 64px);
+    max-width: 986px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout: auto;
+    background: #262626;
+}
+
+tr {
+    height: 120px;
+    border-bottom: 1px solid #858585;
+}
+
+td {
+    padding: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+td:nth-child(1) {
+    width: 28%;
+    padding-left: 0;
+}
+
+td:nth-child(2) {
+    width: 14%;
+}
+
+td:nth-child(3) {
+    width: 15%;
+}
+
+td:nth-child(4) {
+    width: 17%;
+}
+
+td:nth-child(5) {
+    width: 9%;
+}
+
+td:nth-child(6) {
+    width: 17%;
+    text-align: right;
+    padding-left: 12px;
+}
+
+.coin-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.symbol {
+    font-size: 28px;
+}
+
+.price {
+    font-size: 28px;
+}
+
+.volume {
+    font-size: 18px;
+}
+
+.positive {
+    font-size: 18px;
+    color: #4ade80;
+}
+
+.negative {
+    font-size: 18px;
+    color: #f87171;
+}
+
+.mkt-cap {
+    font-size: 16px;
+}
+
+@media (max-width: 900px) {
+    body {
+        padding-inline: 20px;
+    }
+
+    .controls {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    input,
+    button {
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        table-layout: auto;
+    }
+
+    tbody {
+        display: table;
+        min-width: 900px;
+    }
+
+    tr {
+        height: 96px;
+    }
+
+    img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .name,
+    .symbol,
+    .price,
+    .volume,
+    .positive,
+    .negative,
+    .mkt-cap {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="Search By Name or Symbol..." oninput="handleSearch()">
+        <button onclick="sortMktCap()">Sort By Mkt Cap</button>
+        <button onclick="sortPercentage()">Sort by percentage</button>
+    </div>
+
+    <table id="cryptoTable">
+        <tbody id="tableBody">
+            <!-- Data will be populated here -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
